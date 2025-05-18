@@ -35,12 +35,12 @@ def send_txn(function_call):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
     print("⏳ Tx sent! Waiting for confirmation...")
     receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
-    print("✅ Tx confirmed:", receipt.transactionHash.hex())
+    print(" Tx confirmed:", receipt.transactionHash.hex())
 
-# 👉 1. Add a new patient record
+#  1. Add a new patient record
 send_txn(contract.functions.addPatientRecord("patient_001"))
 
-# 👉 2. Transfer record to another account
+#  2. Transfer record to another account
 # Replace with a real Ethereum testnet address
 recipient = "0xRecipientAddressHere"
 send_txn(contract.functions.transferPatientRecord("patient_001", recipient))
