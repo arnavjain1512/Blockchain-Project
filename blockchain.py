@@ -81,7 +81,7 @@ class Blockchain:
         return [block.__dict__ for block in self.chain]
 
 
-#  Example Usage
+#Example Usage
 if __name__ == "__main__":
     blockchain = Blockchain()
 
@@ -93,3 +93,9 @@ if __name__ == "__main__":
 
     for block in blockchain.chain:
         print(json.dumps(block.__dict__, indent=4))
+
+
+
+
+
+
