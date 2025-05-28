@@ -38,11 +38,3 @@ send_txn(contract.functions.addRecord("patient_001"))
 
 recipient = "DIFFERENT_WALLET_ADDRESS_HERE"
 send_txn(contract.functions.transferRecord(0, recipient))
-
-
-
-
-
-
-
-
